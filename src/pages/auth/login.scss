@@ -1,0 +1,149 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logincard {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  box-shadow: 0px 0px 5px 0.8px var(--primary-color);
+  border-radius: 15px;
+}
+
+.login-banner {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  > img {
+    width: 90%;
+    height: 60%;
+    border-radius: 15px;
+  }
+}
+
+.over-lap {
+  background: #0b7bea72;
+  position: absolute;
+  height: 60%;
+  width: 90%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+
+  > :first-child,
+  :nth-child(2) {
+    color: var(--primary-color);
+  }
+
+  > :last-child {
+    color: #fff;
+  }
+}
+.login-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+  > p {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  > input {
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    border: var(--primary-color) 1px solid;
+    padding: 10px;
+    color: rgb(255, 166, 0);
+    font-size: 15px;
+
+    ::placeholder {
+      color: var(--primary-color);
+    }
+  }
+
+  > .btn {
+    background: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .logincard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-shadow: none;
+  }
+}
+@media (max-width: 780px) {
+  .logincard {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+  }
+
+  .login-banner {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: self-start;
+    border-radius: 0;
+    z-index: 5;
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+
+  .over-lap {
+    background: #0b7bea72;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .login-info {
+    z-index: 10;
+    margin-top: -70px;
+    border-radius: 15px;
+    width: 80%;
+    height: 180px;
+    box-shadow: 0px 0px 3px 0.6px #00000072;
+    background: #fff;
+    position: relative;
+
+    > input {
+        margin-bottom: 40px;
+    }
+
+    > .btn {
+      position: absolute;
+      bottom: -25px;
+    }
+  }
+}
