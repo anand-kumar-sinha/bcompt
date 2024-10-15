@@ -16,6 +16,10 @@
   display: flex;
   box-shadow: 0px 0px 5px 0.8px var(--primary-color);
   border-radius: 15px;
+
+  > .applogo {
+    display: none;
+  }
 }
 
 .login-banner {
@@ -63,7 +67,6 @@
   width: 50%;
   background-color: var(--trasnparent-color);
 
-
   > .normal-txt {
     color: var(--primary-color);
     text-transform: uppercase;
@@ -82,7 +85,7 @@
     font-size: 15px;
   }
 
-  >input::placeholder {
+  > input::placeholder {
     color: var(--primary-color);
   }
 
@@ -97,17 +100,17 @@
     cursor: pointer;
   }
 
-  .otp-txt{
+  .otp-txt {
     text-align: center;
   }
 
-  .chng-phn{
+  .chng-phn {
     margin-top: 30px;
     text-decoration: underline;
     cursor: pointer;
     color: var(--primary-color);
   }
-  .inp-otp{
+  .inp-otp {
     margin-top: 30px;
     width: 30%;
     text-align: center;
@@ -127,7 +130,7 @@
   }
 }
 @media (max-width: 780px) {
-  .container{
+  .container {
     background-image: none;
   }
   .logincard {
@@ -137,6 +140,21 @@
     background: none;
     align-items: center;
     border-radius: 0;
+
+    > .applogo {
+      display: flex;
+      width: 100%;
+      height: 150px;
+      margin-bottom: 30px;
+      justify-content: center;
+      align-items: center;
+
+      > img {
+        width: auto;
+        height: 100%;
+        border-radius: 100%;
+      }
+    }
   }
 
   .login-banner {
@@ -174,7 +192,7 @@
       margin-bottom: 40px;
     }
 
-    .inp-otp{
+    .inp-otp {
       margin-top: 10px;
       margin-bottom: 0;
       width: 30%;
@@ -186,9 +204,8 @@
       bottom: -25px;
     }
 
-    
-  .chng-phn{
-    margin-bottom: 50px;
-  }
+    .chng-phn {
+      margin-bottom: 50px;
+    }
   }
 }

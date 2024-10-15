@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./PersonalDetails.scss";
 import { Country, State, City } from "country-state-city";
+import AppLogo from "../../../assets/app_logo.jpeg";
 
 const PersonalDetails = () => {
   const [countries, setCountries] = useState([]);
@@ -28,6 +29,9 @@ const PersonalDetails = () => {
   return (
     <div className="container">
       <div className="logincard">
+      <div className="applogo">
+        <img src={AppLogo} alt="AppLogo" />
+      </div>
         <div className="basic-info">
           <p className="title">Basic Info</p>
           <div className="details">
@@ -85,18 +89,17 @@ const PersonalDetails = () => {
             </select>
             <input type="text" placeholder="Refer code" />
             <div className="terms-cont">
-            <input type="checkbox" id="term&condition"/>
-            <label htmlFor="term&condition">By continuing, you agree our terms & condition</label>
+              <input type="checkbox" id="term&condition" />
+              <label htmlFor="term&condition">
+                By continuing, you agree our terms & condition
+              </label>
             </div>
-            
 
-        <button className="btn-register">Register</button>
-
+            <button className="btn-register">Register</button>
           </div>
         </div>
       </div>
-      <div>
-      </div>
+      <div></div>
     </div>
   );
 };
