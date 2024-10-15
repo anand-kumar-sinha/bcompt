@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./PersonalDetails.scss";
-import { Country, State, City } from "country-state-city";
+import { Country, State, City, } from "country-state-city";
 import AppLogo from "../../../assets/app_logo.jpeg";
 
 const PersonalDetails = () => {
@@ -36,11 +36,11 @@ const PersonalDetails = () => {
         <div className="basic-info">
           <p className="title">Basic Info</p>
           <div className="details">
-            <input type="text" placeholder="Please enter your phone number" />
+            <input type="tel" placeholder="Please enter your phone number"  maxLength={10} />
 
             <input type="text" placeholder="Please enter your name" />
 
-            <input type="text" placeholder="Please enter your email" />
+            <input type="email" placeholder="Please enter your email" />
             <input
               type="text"
               placeholder="Please enter your school/college name"
@@ -66,7 +66,7 @@ const PersonalDetails = () => {
           <div className="details">
             <input type="text" placeholder="Please enter your address" />
 
-            <input type="text" placeholder="Please enter your pincode" />
+            <input type="tel" placeholder="Please enter your pincode" maxLength={5}/>
 
             <select onChange={handleCountryChange} value={selectedCountry}>
               <option value="">Select your Country</option>
@@ -86,7 +86,7 @@ const PersonalDetails = () => {
             </select>
 
             <select>
-              <option value="">Select your City</option>
+              <option value="">Select your District</option>
               {cities.map((city) => (
                 <option key={city.name} value={city.name}>
                   {city.name}

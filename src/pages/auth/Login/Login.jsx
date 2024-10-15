@@ -30,7 +30,7 @@ const Login = () => {
             <p className="otp-txt">
               we have just sent you on your mobile number
             </p>
-            <input type="text" className="inp-otp" placeholder="0 0 0 0" />
+            <input type="tel" className="inp-otp" placeholder="0 0 0 0" maxLength={4} />
             <p className="chng-phn" onClick={()=> setSentOtp(false)}>Change phone no?</p>
             <div className="btn" onClick={sentOtpFun}>
               <GrLinkNext color="#fff" size={25} />
@@ -39,7 +39,7 @@ const Login = () => {
         ) : (
           <div className="login-info">
             <p className="normal-txt">Login</p>
-            <input type="text" placeholder="Phone no" />
+            <input type="tel" placeholder="Phone no" maxLength={10} />
             <div className="btn" onClick={sentOtpFun}>
               <GrLinkNext color="#fff" size={25} />
             </div>
