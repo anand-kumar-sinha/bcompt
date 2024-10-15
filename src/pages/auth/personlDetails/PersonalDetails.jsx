@@ -9,6 +9,7 @@ const PersonalDetails = () => {
   const [cities, setCities] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedState, setSelectedState] = useState("");
+  const [inputType, setInputType] = useState("text");
   useEffect(() => {
     // Fetch all countries when the component loads
     setCountries(Country.getAllCountries());
@@ -29,9 +30,9 @@ const PersonalDetails = () => {
   return (
     <div className="container">
       <div className="logincard">
-      <div className="applogo">
-        <img src={AppLogo} alt="AppLogo" />
-      </div>
+        <div className="applogo">
+          <img src={AppLogo} alt="AppLogo" />
+        </div>
         <div className="basic-info">
           <p className="title">Basic Info</p>
           <div className="details">
@@ -44,7 +45,12 @@ const PersonalDetails = () => {
               type="text"
               placeholder="Please enter your school/college name"
             />
-            <input type="date" placeholder="Please enter your date of birth" />
+            <input
+              type={inputType}
+              placeholder="dd-mm-yy"
+              onFocus={() => setInputType("date")}
+              onBlur={() => setInputType("text")}
+            />
             <div className="gender-cont">
               <p>Please select your gender</p>
               <input type="radio" name="gender" id="male" />
