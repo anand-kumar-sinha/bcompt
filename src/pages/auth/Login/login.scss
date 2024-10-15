@@ -4,11 +4,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(../../../assets//rb_9153.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logincard {
   width: 900px;
   height: 500px;
+  background-color: var(--trasnparent-color);
   display: flex;
   box-shadow: 0px 0px 5px 0.8px var(--primary-color);
   border-radius: 15px;
@@ -119,10 +123,14 @@
   }
 }
 @media (max-width: 780px) {
+  .container{
+    background-image: none;
+  }
   .logincard {
     width: 100%;
     height: 100%;
     flex-direction: column;
+    background: none;
     align-items: center;
     border-radius: 0;
   }

@@ -1,0 +1,119 @@
+.basic-info {
+  width: 50%;
+  padding: 10px;
+  background: var(--trasnparent-color);
+  > .title,
+  .btn-register {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: var(--primary-color);
+    padding: 8px;
+    border-radius: 15px;
+    text-align: center;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  > input,
+  select {
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    border: var(--primary-color) 1px solid;
+    padding: 10px;
+    color: var(--primary-color);
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  > input::placeholder {
+    color: var(--primary-color);
+  }
+
+  > .gender-cont {
+    width: 80%;
+
+    > p {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    > input[type="radio"] {
+      display: none; /* Hide the default radio button */
+    }
+
+    /* Custom radio button */
+    > label {
+      position: relative;
+      padding: 0 30px;
+      color: var(--primary-color);
+      cursor: pointer;
+    }
+
+    > label::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    > input[type="radio"]:checked + label::before {
+      border-color: var(--primary-color);
+      background-color: var(--primary-color);
+    }
+
+    > input[type="radio"]:checked + label::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+    }
+  }
+}
+
+.terms-cont {
+  accent-color: var(--primary-color);
+  color: var(--primary-color);
+  > input {
+    margin: 0 5px;
+  }
+}
+
+.btn-register {
+  margin-top: 30px;
+  border: none;
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  .basic-info {
+    width: 100%;
+    background-color: none;
+  }
+
+  .details {
+    > input,
+    select {
+      width: 90%;
+    }
+  }
+  .gender-cont {
+    width: 90% !important;
+  }
+}

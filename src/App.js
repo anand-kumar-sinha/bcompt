@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./pages/auth/Login";
-import OtpVerification from "./pages/auth/OtpVerification";
+import Login from "./pages/auth/Login/Login";
 import Home from "./pages/home/Home";
 import { useSelector } from "react-redux";
+import PersonalDetails from "./pages/auth/personlDetails/PersonalDetails";
 
 function App() {
   const { user } = useSelector((state) => state.user);
@@ -11,6 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={user?.name ? <Home /> : <Login />} />
+          <Route path="/auth-personaldetails" element={<PersonalDetails />} />
         </Routes>
       </BrowserRouter>
     </>

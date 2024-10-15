@@ -7,4 +7,5 @@
 
 :root {
     --primary-color: #ffa200;
+    --trasnparent-color: rgba(255, 255, 255, 0.3);
   }

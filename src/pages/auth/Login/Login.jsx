@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import loginImg from "../../assets/login-screen-banner.jpg";
+import loginImg from "../../../assets/login-screen-banner.jpg";
 import "./login.scss";
 import { GrLinkNext } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
