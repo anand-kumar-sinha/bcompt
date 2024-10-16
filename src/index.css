@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,4 +8,24 @@
 :root {
     --primary-color: #ffa200;
     --trasnparent-color: rgba(255, 255, 255, 0.3);
-  }
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        height: 0px;
+    }
+}

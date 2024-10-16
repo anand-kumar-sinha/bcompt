@@ -3,10 +3,16 @@ import loginImg from "../../../assets/login-screen-banner.jpg";
 import "./login.scss";
 import { GrLinkNext } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 const Login = () => {
   const [sentOtp, setSentOtp] = useState(false);
   const navigate = useNavigate();
+
+
+  //deviceId for tracking device login
+  const deviceId = uuidv4();
+  console.log(deviceId)
 
   //sent otp fuction
   const sentOtpFun = () => {
