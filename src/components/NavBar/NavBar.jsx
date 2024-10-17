@@ -4,7 +4,6 @@ import "./NavBar.scss";
 import { CiSearch } from "react-icons/ci";
 import { MdSupportAgent } from "react-icons/md";
 import { GoBell } from "react-icons/go";
-import Tab from "./Tab";
 import SideBar from "./SideBar";
 
 const NavBar = () => {
@@ -72,7 +71,7 @@ const NavBar = () => {
     <>
       <div className="NavBar">
         <div>
-          <img src={AppLogo} alt="AppLogo"  onClick={toggleSidebar}/>
+          <img src={AppLogo} alt="AppLogo" onClick={toggleSidebar} />
           <p>B competition</p>
           <SideBar isOpen={isOpen} toggleSidebar={toggleSidebar} />
         </div>
@@ -86,10 +85,15 @@ const NavBar = () => {
       </div>
 
       {/* tab options */}
-      <div className="nav-tab-cont">
-        {data.map((item, index) => (
-          <Tab key={index} name={item} />
-        ))}
+      <div className="select-cont">
+        <select className="custom-select">
+          <option value="">{data[0]}</option>
+          {data.map((city) => (
+            <option key={city} value={city}>
+              {city}
+            </option>
+          ))}
+        </select>
       </div>
     </>
   );

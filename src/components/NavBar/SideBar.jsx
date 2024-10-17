@@ -15,7 +15,10 @@ import { IoIosPower } from "react-icons/io";
 
 const SideBar = ({ isOpen, toggleSidebar }) => {
   return (
-    <>
+    <div
+      className={`sidebarcont ${isOpen ? "active" : ""}`}
+      onClick={toggleSidebar}
+    >
       <div className={`sidebar ${isOpen ? "active" : ""}`}>
         <RxCross2 className="close-btn" onClick={toggleSidebar} />
         <div className="profile">
@@ -77,7 +80,7 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
         </div>
       </div>
       {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
-    </>
+    </div>
   );
 };
 

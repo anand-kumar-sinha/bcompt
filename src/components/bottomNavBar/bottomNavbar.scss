@@ -1,0 +1,38 @@
+.bottomNavbar {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: calc(100vw - 50vw);
+  margin: 0 25vw;
+  display: flex;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0px 0px 5px 0.8px var(--primary-color);
+  border-radius: 15px;
+
+  > .active {
+    color: var(--primary-color);
+  }
+  > div {
+    width: calc(100% / 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    > svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .bottomNavbar {
+    width: 100vw;
+    margin: 0;
+    bottom: 0;
+  border-radius: 15px 15px 0 0;
+
+  }
+}
