@@ -4,12 +4,13 @@ import { MdOutlineCalendarMonth } from "react-icons/md";
 import { IoMdClock } from "react-icons/io";
 import { CiUser } from "react-icons/ci";
 import { TbCoinRupee } from "react-icons/tb";
-
 import "./testcard.scss";
+import { useNavigate } from "react-router-dom";
 
-const TestCard = () => {
+const TestCard = ({id}) => {
+    const navigate = useNavigate();
   return (
-    <div className="test-card">
+    <div className="test-card" onClick={() => navigate(`/test/${id}`)}>
       <div>
         <FaMedal />
       </div>

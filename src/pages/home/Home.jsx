@@ -15,10 +15,11 @@ const Home = () => {
         <p>Online Exams</p>
       </div>
       <div className="test-cont">
-        <TestCard />
-        <TestCard />
-        <TestCard />
-        <TestCard />
+        <TestCard id={1} />
+        <TestCard id={2} />
+        <TestCard id={3} />
+        <TestCard id={4} />
+        <TestCard id={5} />
       </div>
     </div>
   );
