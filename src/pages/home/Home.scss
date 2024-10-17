@@ -1,3 +1,35 @@
 .homepage{
     width: 100%;
 }
+
+.test-cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.online-exams{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    >svg{
+        height: 35px;
+        width: 35px;
+        color: var(--primary-color);
+    }
+    >p{
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+
+    }
+}
+
+@media (max-width: 900px) {
+    .test-cont{
+        display: block;
+        flex-direction: column;
+    }
+}

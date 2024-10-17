@@ -1,0 +1,80 @@
+.test-card {
+  border: 1px solid var(--primary-color);
+  display: flex;
+  margin: 10px;
+  padding: 8px;
+  border-radius: 15px;
+  width: 47%;
+
+  > :first-child {
+    color: var(--primary-color);
+    width: 50px;
+
+    > svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  > :nth-child(2) {
+    width: 100%;
+    > :first-child {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      .time {
+        color: red;
+        font-size: 13px;
+      }
+      .purchased {
+        background: var(--primary-color);
+        padding: 5px;
+        border-radius: 5px;
+        color: #fff;
+      }
+    }
+
+    > :last-child {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        > div {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          > svg {
+            color: var(--primary-color);
+            width: 25px;
+            height: 25px;
+            text-align: center;
+          }
+          > p {
+            color: var(--primary-color);
+            font-size: 10px;
+            text-align: center;
+            margin-top: 8px;
+          }
+        }
+
+        > div {
+          margin-top: 10px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .test-card {
+    width: calc(100% - 20px);
+  }
+}

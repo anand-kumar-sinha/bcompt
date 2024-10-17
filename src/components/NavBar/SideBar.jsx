@@ -13,7 +13,6 @@ import { HiLanguage } from "react-icons/hi2";
 import { RiUserShared2Line } from "react-icons/ri";
 import { IoIosPower } from "react-icons/io";
 
-
 const SideBar = ({ isOpen, toggleSidebar }) => {
   return (
     <>
@@ -31,50 +30,50 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
         </div>
         <hr style={{ marginTop: "10px" }} />
         <div className="options">
-            <div className="op-tab">
-                <CiUser />
-                <p>Profile</p>
-            </div>
-            <div className="op-tab">
-                <TbCheckupList />
-                <p>My Exam</p>
-            </div>
-            <div className="op-tab">
-                <TfiCup />
-                <p>Result</p>
-            </div>
-            <div className="op-tab">
-                <IoWallet />
-                <p>Wallet</p>
-            </div>
-            <div className="op-tab">
-                <BiPackage />
-                <p>Package</p>
-            </div>
-            <div className="op-tab">
-                <BiPackage />
-                <p>Offer Package</p>
-            </div>
-            <div className="op-tab">
-                <IoShareSocialOutline />
-                <p>Share</p>
-            </div>
-            <div className="op-tab">
-                <MdSupportAgent />
-                <p>Call Now</p>
-            </div>
-            <div className="op-tab">
-                <HiLanguage />
-                <p>Language</p>
-            </div>
-            <div className="op-tab">
-                <RiUserShared2Line />
-                <p>Refer & Earn</p>
-            </div>
-            <div className="op-tab">
-                <IoIosPower />
-                <p>Logout</p>
-            </div>
+          <div className="op-tab">
+            <CiUser />
+            <p>Profile</p>
+          </div>
+          <div className="op-tab">
+            <TbCheckupList />
+            <p>My Exam</p>
+          </div>
+          <div className="op-tab">
+            <TfiCup />
+            <p>Result</p>
+          </div>
+          <div className="op-tab">
+            <IoWallet />
+            <p>Wallet</p>
+          </div>
+          <div className="op-tab">
+            <BiPackage />
+            <p>Package</p>
+          </div>
+          <div className="op-tab">
+            <BiPackage />
+            <p>Offer Package</p>
+          </div>
+          <div className="op-tab">
+            <IoShareSocialOutline />
+            <p>Share</p>
+          </div>
+          <div className="op-tab">
+            <MdSupportAgent />
+            <p>Call Now</p>
+          </div>
+          <div className="op-tab">
+            <HiLanguage />
+            <p>Language</p>
+          </div>
+          <div className="op-tab">
+            <RiUserShared2Line />
+            <p>Refer & Earn</p>
+          </div>
+          <div className="op-tab">
+            <IoIosPower />
+            <p>Logout</p>
+          </div>
         </div>
       </div>
       {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
