@@ -12,15 +12,22 @@ import { MdSupportAgent } from "react-icons/md";
 import { HiLanguage } from "react-icons/hi2";
 import { RiUserShared2Line } from "react-icons/ri";
 import { IoIosPower } from "react-icons/io";
+import facebook from '../../assets/facebook.png'
+import youtube from '../../assets/youtube.png'
+import whatsapp from '../../assets/whatsapp.png'
+import insta from '../../assets/instagram.png'
+import twitter from '../../assets/twitter.png'
+import telegram from '../../assets/telegram.png'
+import { useNavigate } from "react-router-dom";
 
 const SideBar = ({ isOpen, toggleSidebar }) => {
+  const navigate = useNavigate()
   return (
     <div
       className={`sidebarcont ${isOpen ? "active" : ""}`}
       onClick={toggleSidebar}
     >
       <div className={`sidebar ${isOpen ? "active" : ""}`}>
-        <RxCross2 className="close-btn" onClick={toggleSidebar} />
         <div className="profile">
           <div>
             <img src={Avatar} alt="Avatar" />
@@ -33,30 +40,23 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
         </div>
         <hr style={{ marginTop: "10px" }} />
         <div className="options">
-          <div className="op-tab">
+          <div className="op-tab" onClick={() => navigate('/profile-detail') }>
             <CiUser />
             <p>Profile</p>
           </div>
-          <div className="op-tab">
+          <div className="op-tab" onClick={() => navigate('/my-exams')}>
             <TbCheckupList />
             <p>My Exam</p>
           </div>
-          <div className="op-tab">
+          <div className="op-tab" onClick={() => navigate('/result')}>
             <TfiCup />
             <p>Result</p>
           </div>
-          <div className="op-tab">
+          <div className="op-tab" onClick={() => navigate('/walllet')}>
             <IoWallet />
             <p>Wallet</p>
           </div>
-          <div className="op-tab">
-            <BiPackage />
-            <p>Package</p>
-          </div>
-          <div className="op-tab">
-            <BiPackage />
-            <p>Offer Package</p>
-          </div>
+
           <div className="op-tab">
             <IoShareSocialOutline />
             <p>Share</p>
@@ -76,6 +76,14 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
           <div className="op-tab">
             <IoIosPower />
             <p>Logout</p>
+          </div>
+          <div className="social-icon">
+            <img src={facebook} alt="facebook" />
+            <img src={youtube} alt="youtube" />
+            <img src={whatsapp} alt="whatsapp" />
+            <img src={insta} alt="insta" />
+            <img src={twitter} alt="twitter" />
+            <img src={telegram} alt="telegram" />
           </div>
         </div>
       </div>

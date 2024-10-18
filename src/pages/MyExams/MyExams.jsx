@@ -1,10 +1,11 @@
 import React from 'react'
+import PageNavBar from '../../components/NavBar/PageNavBar'
 
 const MyExams = () => {
   return (
-    <div>
-        My Exams
-    </div>
+    <>
+       <PageNavBar name='My Exams' />
+    </>
   )
 }
 
