@@ -24,7 +24,8 @@ function Layout({ children }) {
     "/profile-detail",
     "/result",
     "/wallet",
-    "/test", // Adjust dynamic routes as needed
+    "/help-center",
+    "/language",
   ];
 
   // Check if the current route matches any of the routes in hideBottomNavRoutes
