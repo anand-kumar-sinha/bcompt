@@ -14,7 +14,11 @@ const BottomNavBar = () => {
 
   useEffect(() => {
     SetTabSwitch(location.pathname.toString().split("/")[1]);
-  }, []);
+    if(location.pathname === "/"){
+      SetTabSwitch('home');
+    }
+    console.log(location.pathname.toString().split("/")[1])
+  }, [location]);
 
   const tabSwitchHandler = (tab) => {
     SetTabSwitch(tab);

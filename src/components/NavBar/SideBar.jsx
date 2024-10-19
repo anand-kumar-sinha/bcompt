@@ -1,12 +1,9 @@
 import React from "react";
-import { RxCross2 } from "react-icons/rx";
 import Avatar from "../../assets/avatar.png";
 import { FaRegEdit } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { TbCheckupList } from "react-icons/tb";
 import { TfiCup } from "react-icons/tfi";
-import { IoWallet } from "react-icons/io5";
-import { BiPackage } from "react-icons/bi";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { MdSupportAgent } from "react-icons/md";
 import { HiLanguage } from "react-icons/hi2";
@@ -18,6 +15,7 @@ import whatsapp from '../../assets/whatsapp.png'
 import insta from '../../assets/instagram.png'
 import twitter from '../../assets/twitter.png'
 import telegram from '../../assets/telegram.png'
+import { IoWalletOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 const SideBar = ({ isOpen, toggleSidebar }) => {
@@ -52,8 +50,8 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
             <TfiCup />
             <p>Result</p>
           </div>
-          <div className="op-tab" onClick={() => navigate('/walllet')}>
-            <IoWallet />
+          <div className="op-tab" onClick={() => navigate('/wallet')}>
+            <IoWalletOutline />
             <p>Wallet</p>
           </div>
 
@@ -61,11 +59,11 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
             <IoShareSocialOutline />
             <p>Share</p>
           </div>
-          <div className="op-tab">
+          <div className="op-tab" onClick={() => navigate('/help-center')}>
             <MdSupportAgent />
             <p>Call Now</p>
           </div>
-          <div className="op-tab">
+          <div className="op-tab" onClick={() => navigate('/language')}>
             <HiLanguage />
             <p>Language</p>
           </div>

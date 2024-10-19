@@ -39,12 +39,6 @@ const UserProfile = () => {
           <div className="basic-info">
             <p className="title">Basic Info</p>
             <div className="details">
-              <input
-                type="tel"
-                placeholder="Please enter your phone number"
-                maxLength={10}
-              />
-
               <input type="text" placeholder="Please enter your name" />
 
               <input type="email" placeholder="Please enter your email" />
@@ -104,13 +98,6 @@ const UserProfile = () => {
                   </option>
                 ))}
               </select>
-              <input type="text" placeholder="Refer code" />
-              <div className="terms-cont">
-                <input type="checkbox" id="term&condition" />
-                <label htmlFor="term&condition">
-                  By continuing, you agree our terms & condition
-                </label>
-              </div>
 
               <button className="btn-register">Save</button>
             </div>

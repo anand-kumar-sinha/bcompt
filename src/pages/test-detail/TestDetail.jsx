@@ -5,7 +5,6 @@ import { BsCashStack } from "react-icons/bs";
 import { FaQuestionCircle } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import AppLogo from "../../assets/app_logo.jpg";
-import MiddleNavBar from "../../components/NavBar/MiddleNavBar";
 import PageNavBar from "../../components/NavBar/PageNavBar";
 
 const TestDetail = () => {
@@ -17,9 +16,7 @@ const TestDetail = () => {
   return (
     <>
       <div className="test-detail">
-        <PageNavBar name={'hi'} date={false}/>
-        <MiddleNavBar />
-
+        <PageNavBar name={"hi"} date={true} />
         <div className="prize-pool">
           <div>
             <FaMedal />
